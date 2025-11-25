@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// Criar uma variável para obter a largura da tela
+import { useState } from 'react'; // aramazena um valor de uma variável e consegue alterar em tempo real ex: true = renderiza com o modo acessível se for false = renderiza no modo normal.
+import { StyleSheet, Text, View, Button, useWindowDimensions } from 'react-native'; // useWindowDimensions = pega o tamanho da tela 
+
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <ResponsiveApp />
+    </SafeAreaProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+function ResponsiveApp() {
+  return <SafeAreaView><Text>Teste</Text>
+  </SafeAreaView>
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
+}
