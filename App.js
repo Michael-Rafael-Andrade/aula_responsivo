@@ -30,6 +30,16 @@ function ResponsiveApp() {
       justifyContent: 'center',
       padding,
     },
+    Text: {
+      color: accessibleMode ? '#ffffff' : '#333333',
+      fontSize: accessibleMode ? fontSize + 8 : fontSize,
+      textalign: 'center',
+      marginBottom: 20,
+    },
+    buttonContainer : {
+      width: '80%',
+      marginTop: 10,
+    },
   });
 
   return <SafeAreaView style={styles.container} >
@@ -45,6 +55,4 @@ function ResponsiveApp() {
       />
     </View>
   </SafeAreaView>
-
-
 }
