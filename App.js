@@ -30,10 +30,10 @@ function ResponsiveApp() {
       justifyContent: 'center',
       padding,
     },
-    Text: {
+    text: {
       color: accessibleMode ? '#ffffff' : '#333333',
       fontSize: accessibleMode ? fontSize + 8 : fontSize,
-      textalign: 'center',
+      textAlign: 'center',
       marginBottom: 20,
     },
     buttonContainer : {
